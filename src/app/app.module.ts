@@ -10,20 +10,25 @@ import {UserComponent} from './user/user.component';
 import {AddUserComponent} from './user/add-user.component';
 
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+
+import {CustomMaterialModule} from './custom-material.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    AddUserComponent
+    AddUserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CustomMaterialModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
