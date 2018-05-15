@@ -9,13 +9,12 @@ import { UserService } from '../user.service';
 })
 export class AddUserComponent {
 
-  user: User;
-
+  user: User = new User();
   constructor(private router: Router, private userService: UserService) {
-
   }
 
   createUser(): void {
+    console.log( this.user );
     this.userService.createUser(this.user)
         .subscribe( data => {
           alert('User created successfully.');
